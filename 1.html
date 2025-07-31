@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单HTML示例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 30px;
+        }
+        
+        h1 {
+            font-size: 6rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            animation: slideIn 1.8s ease-out;
+        }
+        
+        .decoration {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            opacity: 0.7;
+            animation: pulse 2s infinite;
+        }
+        
+        .circle:nth-child(1) { animation-delay: 0s; }
+        .circle:nth-child(2) { animation-delay: 0.4s; }
+        .circle:nth-child(3) { animation-delay: 0.8s; }
+        .circle:nth-child(4) { animation-delay: 1.2s; }
+        .circle:nth-child(5) { animation-delay: 1.6s; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.5); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.7; }
+        }
+        
+        .info {
+            margin-top: 30px;
+            font-size: 1rem;
+            opacity: 0.7;
+            animation: fadeIn 2.5s ease-out;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 4rem; }
+            .subtitle { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>你好</h1>
+        <p class="subtitle">这是一个超级简单的HTML页面</p>
+        
+        <div class="decoration">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        
+        <p class="info">HTML | CSS | JavaScript</p>
+    </div>
+</body>
+</html>
